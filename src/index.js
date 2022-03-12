@@ -1,18 +1,20 @@
 const express = require('express');
 const app = express();
 
-const userController = require('./models/user.model');
-const batchController = require('./models/batch.model');
-const evalutionController = require('./models/evaluation.model');
-const studentController = require('./models/student.model');
-const submissionController = require('./models/submission.model');
+const userController = require('./controllers/user.controller');
+const studentController = require('./controllers/student.controller');
+const batchController = require('./controllers/batch.controller');
+const evaluationController = require('./controllers/evaluation.controller');
+const submissionController = require('./controllers/submission.controller');
 
 
 
 app.use('/users', userController);
-app.use('/student', studentController);
-app.use('/batch', batchController);
-app.use('/evaluation', evalutionController);
-app.use('/submission', submissionController);
+// app.use('/student', studentController);
+// app.use('/batch', batchController);
+// app.use('/evaluation', evaluationController);
+// app.use('/submission', submissionController);
+
+
 
 module.exports = app;

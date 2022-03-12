@@ -1,5 +1,4 @@
 const express = require('express');
-const { json } = require('express/lib/response');
 
 const router = express.Router();
 const Users = require('../models/user.model')
@@ -12,6 +11,5 @@ router.get("", async(req, res) => {
     } catch (err) {
         return res.status(500).send(err.message)
     }
-})
-
-router.get()
+});
+module.exports = router;
