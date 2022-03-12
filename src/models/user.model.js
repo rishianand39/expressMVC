@@ -5,11 +5,11 @@ const userSchema = mongoose.Schema({
     lastName: { type: String, required: true },
     gender: { type: String, required: true },
     dateOfBirth: { type: String, required: true },
-    type: { type: String, required: true }
+    type: { type: String, required: true },
 }, {
     timestamps: true,
-    versionkey: false
-})
+    versionKey: false,
+});
 
 const User = mongoose.model('user', userSchema);
 module.exports = User;
