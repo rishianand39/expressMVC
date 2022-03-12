@@ -9,11 +9,11 @@ const submissionController = require('./controllers/submission.controller');
 
 
 
-app.use('/users', userController);
-// app.use('/student', studentController);
-// app.use('/batch', batchController);
-// app.use('/evaluation', evaluationController);
-// app.use('/submission', submissionController);
+app.use('/user', userController);
+app.use('/student', studentController);
+app.use('/batch', batchController);
+app.use('/evaluation', evaluationController);
+app.use('/submission', submissionController);
 
 
 

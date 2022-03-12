@@ -6,8 +6,8 @@ const Users = require('../models/user.model')
 
 router.get("", async(req, res) => {
     try {
-        const user = await Users.find().lean().exec();
-        return res.status(500).send(user)
+        const users = await Users.find().lean().exec();
+        return res.status(200).send(users)
     } catch (err) {
         return res.status(500).send(err.message)
     }
@@ -15,8 +15,8 @@ router.get("", async(req, res) => {
 
 router.post("", async(req, res) => {
     try {
-        const user = await Users.create(req.body);
-        return res.status(500).send(user);
+        const users = await Users.create(req.body);
+        return res.status(500).send(users);
     } catch (err) {
         return res.status(500).send(err.message);
     }

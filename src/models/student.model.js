@@ -5,7 +5,7 @@ const studentSchema = mongoose.Schema({
     current_batch: { type: String, required: true }
 }, {
     timestamps: true,
-    versionkey: false,
+    versionKey: false,
 });
 
 const Student = mongoose.model('student', studentSchema);

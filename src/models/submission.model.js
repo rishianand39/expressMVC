@@ -1,12 +1,20 @@
 const mongoose = require('mongoose');
 
 const submissionSchema = mongoose.Schema({
-    evaluation_id: { type: String, required: true },
-    student_id: { type: String, required: true },
+    evaluation_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'evaluations',
+        required: true,
+    },
+    student_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'users',
+        required: true,
+    },
     marks: { type: Number, required: true },
 }, {
     timestamps: true,
-    versionkey: false,
+    versionKey: false,
 });
 
 const Submission = mongoose.model('submission', submissionSchema);
