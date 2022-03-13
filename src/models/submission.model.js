@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const submissionSchema = mongoose.Schema({
     evaluation_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'evaluations',
+        ref: 'evaluation',
         required: true,
     },
     student_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users',
+        ref: 'user',
         required: true,
     },
     marks: { type: Number, required: true },

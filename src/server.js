@@ -4,7 +4,7 @@ app.listen(7600, async() => {
     try {
         await connect;
     } catch (err) {
-        console.log(error)
+        console.log(err)
     }
     console.log("listening on port 7600")
 })

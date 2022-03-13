@@ -4,12 +4,12 @@ const evaluationSchema = mongoose.Schema({
     date_of_evaluation: { type: String, required: true },
     batch_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'batches',
+        ref: 'batch',
         required: true,
     },
     instructor: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users',
+        ref: 'user',
         required: true,
     }
 }, {
